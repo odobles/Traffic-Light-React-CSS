@@ -1,3 +1,41 @@
+.ground{
+    background-color: rgb(253, 84, 5);
+    width: 118px;
+    height: 320px;
+    border-radius: 10%;
+
+}
+
+.light{
+    border-radius: 50%;
+    width: 100px;
+    height: 90px;
+
+}
+.red{
+    background-color: rgb(83, 11, 11);
+}
+
+.yellow{
+    background-color: rgb(83, 83, 14);
+
+}
+
+.green{
+    background-color: rgb(11, 53, 11);
+}
+
+.bg-danger{
+    box-shadow: -1px 0px 44px 15px rgba(255,0,0,0.88);
+}
+
+.bg-warning{
+    box-shadow: -1px 0px 44px 15px rgba(250,255,0,0.88);
+}
+
+.bg-success{
+    box-shadow: -1px 0px 44px 15px rgba(56,148,43,0.88);
+}
 
 /* 
 

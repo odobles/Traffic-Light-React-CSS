@@ -1,26 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
 
-//create your first component
-const Home = () => {
+//Component
+const trafficLight = () => {
+
+	// logic of the app
+	const[colorDanger,setColorDanger] = useState("")
+	const[colorWarning,setColorWarning] = useState("")
+	const[colorSuccess,setColorSuccess] = useState("")
+
+
 	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+		<div className="shape d-flex justify-content-center">
+			<div className="ground mt-5 d-flex flex-column justify-content-center px-2">
+				<div className={`red light ${colorDanger}`} onClick={()=>{setColorDanger("bg-danger"), setColorWarning(""), setColorSuccess("")}}></div>
+				<div className={`yellow light ${colorWarning}`} onClick={()=>{setColorWarning("bg-warning"), setColorSuccess("") ,setColorDanger("")}}></div>
+				<div className={`green light ${colorSuccess}`} onClick={()=>{setColorSuccess("bg-success"), setColorWarning(""),setColorDanger("")}}></div>
+			</div>
 		</div>
+
+
 	);
 };
 
-export default Home;
+export default trafficLight;
